@@ -104,7 +104,7 @@ main {
     align-items: center;
 }
 
-.botao-adicionar {
+.botao-adicionar, #btnAdicionar {
     background-color: #339989;
     color: #ffffff;
     border: none;
@@ -134,39 +134,61 @@ main {
     cursor: pointer;
 }
 
+
 table {
     width: 100%;
     border-collapse: collapse;
     background-color: white;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-table th,
-table td {
-    padding: 10px;
-    text-align: left;
+thead {
+    background-color: whitesmoke;
 }
-
-table th {
+thead tr th {
+    padding: 16px;
+    text-align: start;
+    margin-bottom: 50px;
     background-color: rgb(255, 255, 255);
     color: #339989;
 }
 
-table tr:nth-child(even) {
-    background-color: #f2f2f2;
+thead tr th.acao {
+    width: 100px !important;
+    text-align: center;
 }
 
-table tr:hover {
+tbody tr td {
+    vertical-align: text-top;
+    padding: 10px;
+    max-width: 50px;
+}
+
+tbody tr {
+    margin-bottom: 50px;
+}
+
+tbody tr:hover {
     background-color: #ddd;
 }
 
-.acoes img {
-    width: 20px;
-    height: 20px;
-    margin: 0 5px;
-    cursor: pointer;
+tbody tr td.acao {
+    text-align: center;
+}
+
+td button {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+td button i {
+    font-size: 25px;
+}
+
+td button i:first-child {
+    margin-right: 10px;
 }
 
 footer {
@@ -187,3 +209,76 @@ footer button {
 footer button:hover {
     background-color: #ddd;
 }
+/* Estilo do Formulário - Modal */
+
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    width: 50%;
+}
+
+.modal label {
+    font-size: 14px;
+    width: 100%;
+}
+
+.modal input {
+    width: 100%;
+    outline: none;
+    padding: 5px 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.modal button {
+    width: 100%;
+    margin: 10px auto;
+    outline: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    width: 100%;
+    border: none;
+    background-color:#339989;
+    color: white;
+}
+
+.active {
+    display: flex;
+}
+
+.active .modal {
+    animation: modal .4s;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
