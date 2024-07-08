@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E5E7EB;  
+}
+
+.container {
+    display: flex;
+
+}
+
+aside {
+    background-color: #339989;
+    width: 60px;
+    height: 100vh;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: width 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+
+aside.expande {
+    width: 200px;
+}
+
+aside img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+aside nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside.expande nav {
+    display: flex;
+}
+
+aside .icone {
+    margin: 20px 0;
+}
+
+aside .icone:hover {
+    opacity: 0.7;
+}
+
+.conteudo-principal {
+    flex: 1;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.cabecalho {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cabecalho h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #339989;
+}
+
+.topo-tabela {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botao-adicionar {
+    background-color: #339989;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.pesquisar {
+    display: flex;
+    align-items: center;
+}
+
+.pesquisar input {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.icone-pesquisar {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: left;
+
+}
+
+table th {
+    background-color: rgb(255, 255, 255);
+    color: #339989;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+.acoes img {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.paginacao {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+
+.paginacao button {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.paginacao button:hover {
+    background-color: #ddd;
+}
